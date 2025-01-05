@@ -1,0 +1,285 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* shabnam normal */
+  @font-face {
+    font-family: "Shabnam"; /* 400 */
+    src: local("Shabnam"), url("../fonts/shabnam/Shabnam.woff2"),
+      format("woff2");
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Shabnam"; /* 400 */
+    src: local("Shabnam"), url("../fonts/shabnam/Shabnam.woff"), format("woff");
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Shabnam"; /* 400 */
+    src: local("Shabnam"), url("../fonts/shabnam/Shabnam.eot"), format("eot");
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Shabnam"; /* 400 */
+    src: local("Shabnam"), url("../fonts/shabnam/Shabnam.ttf"), format("ttf");
+    font-display: swap;
+  }
+  /* shabnam light */
+  @font-face {
+    font-family: "Shabnam Light"; /* 400 */
+    src: local("Shabnam"), url("../fonts/shabnam-light/Shabnam-Light.woff2"),
+      format("woff2");
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Shabnam Light"; /* 400 */
+    src: local("Shabnam"), url("../fonts/shabnam-light/Shabnam-Light.woff"),
+      format("woff");
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Shabnam Light"; /* 400 */
+    src: local("Shabnam"), url("../fonts/shabnam-light/Shabnam-Light.eot"),
+      format("eot");
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Shabnam Light"; /* 400 */
+    src: local("Shabnam"), url("../fonts/shabnam-light/Shabnam-Light.ttf"),
+      format("ttf");
+    font-display: swap;
+  }
+  /* shabnam Bold */
+  @font-face {
+    font-family: "Shabnam Bold"; /* 400 */
+    src: local("Shabnam"), url("../fonts/shabnam-bold/Shabnam-Bold.woff2"),
+      format("woff2");
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Shabnam Bold"; /* 400 */
+    src: local("Shabnam"), url("../fonts/shabnam-bold/Shabnam-Bold.woff"),
+      format("woff");
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Shabnam Bold"; /* 400 */
+    src: local("Shabnam"), url("../fonts/shabnam-bold/Shabnam-Bold.eot"),
+      format("eot");
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Shabnam Bold"; /* 400 */
+    src: local("Shabnam"), url("../fonts/shabnam-bold/Shabnam-Bold.ttf"),
+      format("ttf");
+    font-display: swap;
+  }
+}
+@layer components {
+  .submenu-item {
+    @apply relative text-orange-300 pr-2;
+  }
+  .submenu {
+    @apply w-full flex-col gap-y-3 pr-7 text-sm text-zinc-600 dark:text-white;
+  }
+  .submenu-item::after {
+    content: "";
+    width: 4px;
+    height: 4px;
+    border-radius: 100px;
+    background-color: #fdba74;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+    margin: auto;
+  }
+  .overlay {
+    @apply md:hidden fixed top-0 bottom-0 right-0 left-0 z-10 bg-black/40;
+  }
+  .overlay-open {
+    @apply opacity-100 visible;
+  }
+  .overlay-close {
+    @apply opacity-0 invisible;
+  }
+
+  .circle {
+    @apply flex items-center justify-center border rounded-full;
+  }
+  .circle--out {
+    @apply absolute right-0 left-0 bottom-0 hidden md:flex mx-auto w-[203px] h-[203px] translate-y-[50%] border-white/25;
+  }
+  .circle--mid {
+    @apply w-[145px] h-[145px] border-white/50;
+  }
+  .circle--in {
+    @apply w-[95px] h-[95px] border-white/80;
+  }
+
+  @media screen and (min-width: 1280px) {
+    html.dark .products {
+      background: url("../images/body-bg.png");
+      background-repeat: no-repeat;
+      background-size: 100%;
+    }
+    .products {
+      background: linear-gradient(
+          rgba(243, 244, 246, 0.65),
+          rgba(243, 244, 246, 0.65)
+        ),
+        url("../images/body-bg.png");
+      background-repeat: no-repeat;
+      background-size: 100%;
+    }
+  }
+  .section-title {
+    @apply font-ShabnamBold text-xl md:text-2xl lg:text-4xl text-zinc-700;
+  }
+  .section-subtitle {
+    @apply font-ShabnamLight inline-block mt-0.5 md:mt-1 lg:mt-1.5 text-base md:text-xl lg:text-2xl text-zinc-700;
+  }
+  .section-link {
+    @apply flex items-center -mb-2.5 md:mt-1 lg:mt-1.5 h-10 pr-3 pl-1 md:gap-x-1 text-sm md:text-base lg:text-xl tracking-tightest text-zinc-700 hover:text-black rounded-full;
+  }
+  .offer {
+    @apply relative text-gray-400;
+  }
+  .offer::after {
+    content: "";
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    inset: 0;
+    top: -1px;
+    margin: auto;
+    background-color: #ef4444;
+  }
+  .category-item1 {
+    background: linear-gradient(
+        270deg,
+        rgba(0, 0, 0, 0.6) 33.85%,
+        rgba(0, 0, 0, 0.1) 100%
+      ),
+      url("../images/categories/category-right.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .category-item2 {
+    background: linear-gradient(
+        270deg,
+        rgba(0, 0, 0, 0.6) 33.85%,
+        rgba(0, 0, 0, 0.1) 100%
+      ),
+      url("../images/categories/category-left.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .line-center {
+    position: relative;
+  }
+  .line-center::after,
+  .line-center::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    background-color: #d1d5db;
+  }
+  .line-center::after {
+    width: 1px;
+    height: calc(100% - 20px);
+  }
+  .line-center::before {
+    width: calc(100% - 32px);
+    height: 1px;
+  }
+  html.dark .line-center::after {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  html.dark .line-center::before {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  @media screen and (min-width: 768px) {
+    .line-center::after,
+    .line-center::before {
+      content: none;
+    }
+  }
+  /* new style  */
+  .scrollable-content::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  .scrollable-content::-webkit-scrollbar-thumb {
+    background-color: #cccccc;
+    border-radius: 5px;
+  }
+
+  .scrollable-content::-webkit-scrollbar-track {
+    background-color: #f0f0f0;
+    border-radius: 5px;
+  }
+  .search-style-1 {
+    @apply grid-cols-1 max-w-xs md:max-w-sm lg:max-w-sm;
+  }
+  .search-style-2 {
+    @apply grid-cols-1 sm:grid-cols-2 max-w-xs sm:max-w-lg md:max-w-xl lg:max-w-2xl;
+  }
+  .search-style-3 {
+    @apply grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 max-w-xs sm:max-w-lg md:max-w-xl lg:max-w-full xl:max-w-6xl;
+  }
+  .nav-item a.active {
+    border-left: 2px solid red;
+  }
+  .blog::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    content: "";
+    background-image: linear-gradient(
+      to bottom,
+      rgba(1, 15, 36, 0) 0%,
+      rgba(1, 14, 34, 0.7) 100%
+    );
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+  }
+  /* .subHedaer {
+    background: url("../images/banner/just-do-it.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  } */
+  .footer {
+    background: url("../images/nike-logo.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-position: center; */
+  }
+
+  /* غیر فعال کردن امکان انتخاب متن ها */
+  .unSelectable {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  /* Safari */
+  /* Firefox */
+  /* IE/Edge */
+}
+
+@layer utilities {
+  .flex-center {
+    @apply flex items-center justify-center;
+  }
+  .ltr-text {
+    direction: ltr;
+    text-align: left;
+  }
+}
