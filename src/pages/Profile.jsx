@@ -23,6 +23,8 @@ import FavoriteMobile from "../features/profile/FavoriteMobile";
 import Favorite from "../features/profile/Favorite";
 import PersonalInfoMobile from "../features/profile/PersonalInfoMobile";
 import PersonalInfo from "../features/profile/PersonalInfo";
+import Modal from "../ui/Modal";
+import Button from "../ui/Button";
 
 function Profile() {
   useScrollTop();
@@ -37,6 +39,7 @@ function Profile() {
   const shoppingContainer = useRef(null);
   const flexableDiv = useRef(null);
   const [isMobile, setIsMobile] = useState(false);
+  const [isShowLogout, setIsShowLogout] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -105,6 +108,7 @@ function Profile() {
 
   useEffect(() => {
     navigate("/profile");
+    setIsShowLogout(false);
   }, [isMobile]);
 
   useEffect(() => {
@@ -116,6 +120,18 @@ function Profile() {
     logout();
     navigate("/");
   }
+
+  function handleShowLogout() {
+    setIsShowLogout((cur) => !cur);
+  }
+
+  useEffect(() => {
+    if (isShowLogout) {
+      document.body.style.overflowY = "hidden";
+    } else {
+      document.body.style.overflowY = "auto";
+    }
+  }, [isShowLogout]);
 
   if (isLoadingUser) return <Spinner />;
   return (
@@ -231,7 +247,7 @@ function Profile() {
                   <span className="">اطلاعات حساب کاربری</span>
                 </NavLink>
               </div>
-              <div onClick={handleLogout} className="hover:bg-gray-100 ">
+              <div onClick={handleShowLogout} className="hover:bg-gray-100 ">
                 <div className="flex justify-start  gap-x-2 py-4 mx-4 border-t-2 cursor-pointer">
                   <span>
                     <HiMiniArrowRightOnRectangle className="size-6" />
@@ -239,6 +255,26 @@ function Profile() {
                   <span className="">خروج</span>
                 </div>
               </div>
+              {isShowLogout && (
+                <Modal
+                  closeModal={handleShowLogout}
+                  title="از حساب کاربری خارج می شوید؟"
+                >
+                  <div>
+                    <p className="mb-8 text-sm md:text-base lg:text-lg text-justify">
+                      با خروج از حساب کاربری، به سبد خرید فعلی‌تان دسترسی
+                      نخواهید داشت. هروقت بخواهید می‌توانید مجددا وارد شوید و
+                      خریدتان را ادامه دهید.
+                    </p>
+                    <div className="flex mr-auto gap-x-2 lg:w-10/12 xl:w-7/12">
+                      <Button onClick={handleShowLogout}>انصراف</Button>
+                      <Button onClick={handleLogout} color="secondary">
+                        خروج از حساب
+                      </Button>
+                    </div>
+                  </div>
+                </Modal>
+              )}
             </aside>
           </div>
           {/* desktop */}
