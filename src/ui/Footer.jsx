@@ -12,8 +12,8 @@ import { changeEnToFaNumber } from "../services/changeDigitsNumber";
 const contact = {
   phone: "+989012345678",
   email: "sportshoes@gmail.com",
-  telegram: "@sport_shoes",
-  instagram: "@sport_shoes",
+  telegram: "@sportshoes",
+  instagram: "@sportshoes",
 };
 
 function Footer() {
@@ -194,7 +194,7 @@ function Footer() {
                   </p>
                 </div>
                 <p className="ltr-text flex-grow font-DanaMedium text-xs md:text-base">
-                  Copyright © 2024{" "}
+                  Copyright © 2025{" "}
                   <span className="text-black font-ShabnamBold">
                     {" "}
                     SPORT SHOES{" "}

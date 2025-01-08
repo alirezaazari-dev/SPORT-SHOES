@@ -118,6 +118,8 @@ function Profile() {
 
   function handleLogout() {
     logout();
+    setIsShowLogout(false);
+    document.body.style.overflowY = "auto";
     navigate("/");
   }
 

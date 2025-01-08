@@ -124,7 +124,7 @@ function FormPayment() {
           </div>
         </div>
         <div className="mt-10 ">
-          <Button>رفتن به درگاه پرداخت</Button>
+          <Button disabled={true}>رفتن به درگاه پرداخت</Button>
         </div>
       </form>
     </div>

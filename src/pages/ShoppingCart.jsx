@@ -232,7 +232,7 @@ function ShoppingCart() {
         </div>
       </section>
       {/* ایجاد فاصله برای دیدن کامل سبد */}
-      <div className="lg:hidden w-full h-40"></div>
+      <div className="lg:hidden w-full h-44"></div>
       {/* خلاصه سبد خرید موبایل */}
       {arrShop.length > 0 && (
         <div className=" lg:hidden bg-black text-zinc-200 w-full fixed bottom-0 right-0 left-0 z-30 border-t-4 border-b-4 border-black ">

@@ -3853,13 +3853,13 @@
       ],
       "shoppingCart": [
         {
-          "category": "basketball",
-          "productId": "3000",
-          "id": "3620bf90-cae6-4f35-b55d-66a1f47802a9",
+          "category": "running",
+          "productId": "2000",
+          "id": "c8eeb2cf-a7ac-480f-af63-aacf116b2c11",
           "selectedStyle": {
-            "images": "./images/products/basketball/3000/basketball-3000-FQ3680-300",
-            "style": "FQ3680-300",
-            "color": "آبی/سبزآبی",
+            "images": "./images/products/running/2000/running-2000-HQ2938-800",
+            "style": "HQ2938-800",
+            "color": "نارنجی",
             "isExist": true,
             "sizes": [
               {
@@ -3906,118 +3906,6 @@
             "comments": []
           },
           "selectedSize": 38,
-          "amount": 1
-        },
-        {
-          "category": "basketball",
-          "productId": "3000",
-          "id": "f4f073a9-68a1-47e8-9904-ec98a0762e55",
-          "selectedStyle": {
-            "images": "./images/products/basketball/3000/basketball-3000-FQ3680-300",
-            "style": "FQ3680-300",
-            "color": "آبی/سبزآبی",
-            "isExist": true,
-            "sizes": [
-              {
-                "size": 36,
-                "maxNumber": 2
-              },
-              {
-                "size": 37,
-                "maxNumber": 2
-              },
-              {
-                "size": 38,
-                "maxNumber": 2
-              },
-              {
-                "size": 39,
-                "maxNumber": 2
-              },
-              {
-                "size": 40,
-                "maxNumber": 2
-              },
-              {
-                "size": 41,
-                "maxNumber": 2
-              },
-              {
-                "size": 42,
-                "maxNumber": 2
-              },
-              {
-                "size": 43,
-                "maxNumber": 2
-              },
-              {
-                "size": 44,
-                "maxNumber": 2
-              },
-              {
-                "size": 45,
-                "maxNumber": 2
-              }
-            ],
-            "comments": []
-          },
-          "selectedSize": 37,
-          "amount": 1
-        },
-        {
-          "category": "fitness",
-          "productId": "4001",
-          "id": "ccc16749-5022-4a83-8425-de09ba3918ea",
-          "selectedStyle": {
-            "images": "./images/products/fitness/4001/fitness-4001-DZ2537-001",
-            "style": "DZ2537-001",
-            "color": "مشکی",
-            "isExist": true,
-            "sizes": [
-              {
-                "size": 36,
-                "maxNumber": 2
-              },
-              {
-                "size": 37,
-                "maxNumber": 2
-              },
-              {
-                "size": 38,
-                "maxNumber": 2
-              },
-              {
-                "size": 39,
-                "maxNumber": 2
-              },
-              {
-                "size": 40,
-                "maxNumber": 2
-              },
-              {
-                "size": 41,
-                "maxNumber": 2
-              },
-              {
-                "size": 42,
-                "maxNumber": 2
-              },
-              {
-                "size": 43,
-                "maxNumber": 2
-              },
-              {
-                "size": 44,
-                "maxNumber": 2
-              },
-              {
-                "size": 45,
-                "maxNumber": 2
-              }
-            ],
-            "comments": []
-          },
-          "selectedSize": 36,
           "amount": 1
         }
       ]

@@ -11,8 +11,8 @@ import { changeEnToFaNumber } from "../services/changeDigitsNumber";
 const contact = {
   phone: "+989012345678",
   email: "sportshoes@gmail.com",
-  telegram: "@sport_shoes",
-  instagram: "@sport_shoes",
+  telegram: "@sportshoes",
+  instagram: "@sportshoes",
 };
 
 function ContactUs() {

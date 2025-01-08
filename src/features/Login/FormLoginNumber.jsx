@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { useAuth } from "../../context/AuthContext";
 import { useUser } from "./useUser";
 import { getUser } from "../../services/apiAll";
-import { useQueryClient } from "@tanstack/react-query";
+import { phoneNumberValidator } from "@persian-tools/persian-tools";
 
 function FormLoginNumber() {
   const { login } = useAuth();
@@ -57,7 +57,8 @@ function FormLoginNumber() {
                 //   message: "شماره اشتباه است.",
                 // },
                 validate: (value) =>
-                  checkPhoneNumber(value) || "شماره موبایل اشتباه است.",
+                  // checkPhoneNumber(value)
+                  phoneNumberValidator(value) || "شماره موبایل اشتباه است.",
               })}
             />
             {errors?.phoneNumberLogin?.message && (
